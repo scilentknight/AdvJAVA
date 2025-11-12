@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 public class ColorsPanel extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
+        Color color = g.getColor();
         super.paintComponent(g);
         this.setBackground(Color.WHITE);
 
@@ -23,14 +24,15 @@ public class ColorsPanel extends JPanel {
         g.drawString("Current RGB: " + g.getColor(), 130, 65);
 
         // set new drawing color using static Color object
-        Color color3 = Color.BLUE;
-        g.setColor(color3);
+//        Color color3 = Color.BLUE;
+        // or
+        g.setColor(Color.BLUE);
         g.fillRect(15, 100, 100, 20);
         g.drawString("Current RGB: " + g.getColor(), 130, 90);
 
         // Display individual RGB values
         g.drawString(
-                "RGB Values: " + color3.getRed() + ", " + color3.getGreen() + ", " + color3.getBlue(),
+                "RGB Values: " + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue(),
                 130, 115
         );
     }
