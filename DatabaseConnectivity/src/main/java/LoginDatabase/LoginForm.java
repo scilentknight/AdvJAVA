@@ -8,7 +8,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.FlowLayout;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -32,7 +34,7 @@ public class LoginForm extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Set frame layout to FlowLayout
-        setLayout(new FlowLayout(FlowLayout.CENTER, 20, 15)); // center aligned, hgap=20, vgap=15
+        setLayout(new FlowLayout(FlowLayout.CENTER, 20, 15));
 
 // Username
         JLabel lblUsername = new JLabel("Username:");
